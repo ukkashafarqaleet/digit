@@ -251,4 +251,111 @@
     </div>
 </div>
 
+
+<!-- Why Our Course Section -->
+<div class="container mt-5">
+  <div class="row">
+      <div class="col-md-12">
+          <div class="why-our-course p-4 rounded" style="background: #e3f2fd; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+              <h2 class="text-center text-primary mb-4">Why Our Course?</h2>
+              <div class="row">
+                  <div class="col-md-6 mb-3">
+                      <div class="feature d-flex">
+                          <div class="icon mr-3">
+                              <img src="https://i.postimg.cc/SRWSTWG3/istockphoto-1355934840-612x612.jpg" alt="Responsibility Icon" style="width: 50px;">
+                          </div>
+                          <div class="text">
+                              <h5>Parenting is a Responsibility</h5>
+                              <p>Parenting is a serious responsibility that shapes the future of your children and society. Our course helps you take this journey confidently.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <div class="feature d-flex">
+                          <div class="icon mr-3">
+                              <img src="https://i.postimg.cc/W30zCLN5/236817.png" alt="Requirements Icon" style="width: 50px;">
+                          </div>
+                          <div class="text">
+                              <h5>Comprehensive Curriculum</h5>
+                              <p>Our course meets all the requirements of effective parenting, providing you with the tools and knowledge you need.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <div class="feature d-flex">
+                          <div class="icon mr-3">
+                              <img src="https://i.postimg.cc/KjFjyq4x/playing-games-with-kid-black-glyph-icon-engaging-toddler-in-fun-activities-child-imagination-and-cre.jpg" alt="Playful Activities Icon" style="width: 50px;">
+                          </div>
+                          <div class="text">
+                              <h5>Interactive Activities</h5>
+                              <p>Our courses include playful activities and events designed to make learning enjoyable and engaging for both parents and children.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <div class="feature d-flex">
+                          <div class="icon mr-3">
+                              <img src="https://i.postimg.cc/YCyvmzDz/google-meet-icon-512x512-w3axk3aa.png" alt="Live Lectures Icon" style="width: 50px;">
+                          </div>
+                          <div class="text">
+                              <h5>Live Lectures</h5>
+                              <p>Lectures are live, providing an interactive learning environment where you can connect with our lecturers thrice a week.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <div class="feature d-flex">
+                          <div class="icon mr-3">
+                              <img src="https://i.postimg.cc/8zCF504C/interview-icon-style-vector.jpg" alt="One-to-One Sessions Icon" style="width: 50px;">
+                          </div>
+                          <div class="text">
+                              <h5>One-to-One Sessions</h5>
+                              <p>We offer one-to-one sessions with expert counselors who can help you navigate specific parenting challenges.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <div class="feature d-flex">
+                          <div class="icon mr-3">
+                              <img src="https://i.postimg.cc/cJp6F4SK/5526411.png" alt="Family Counselors Icon" style="width: 50px;">
+                          </div>
+                          <div class="text">
+                              <h5>Family Guidance</h5>
+                              <p>Our family counselors provide guidance and support in light of Deen, ensuring a holistic approach to parenting.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Newsletter Section -->
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-8 offset-md-2">
+            {% for message in messages %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+            {% endfor %}
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="text-center">Subscribe to Our Newsletter</h3>
+                    <p class="text-center">Stay updated with the latest courses and parenting tips by subscribing to our newsletter. We promise to deliver only valuable content that will help you on your parenting journey.</p>
+                    <hr>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Enter your email address" required>
+                        </div>
+                        <button class="btn btn-info btn-block" type="submit">Subscribe Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
